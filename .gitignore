@@ -7,3 +7,7 @@ images/*
 
 .env
 .DS_Store
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
