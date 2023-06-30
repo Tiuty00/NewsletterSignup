@@ -1,11 +1,9 @@
+.env
 package-lock.json
-node_modules/*
-.idea/*
+node_modules/
+database.db
 
 images/*
 !images/.gitkeep
 
-.env*
-.flaskenv*
-!.env.project
-!.env.vault
+
