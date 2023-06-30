@@ -5,8 +5,6 @@ node_modules/*
 images/*
 !images/.gitkeep
 
-.env
-.DS_Store
 .env*
 .flaskenv*
 !.env.project
