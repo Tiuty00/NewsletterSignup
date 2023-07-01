@@ -1,5 +1,5 @@
 
-require('dotenv').config({path:__dirname+'/.env'})
+require('dotenv').config(__dirname+'/.env')
 
 
 
