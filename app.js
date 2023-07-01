@@ -1,5 +1,7 @@
-const {resolve} = require('path')
-require('dotenv').config({path: resolve(__dirname+"env")})
+
+require('dotenv').config({path:__dirname+'/.env'})
+
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -16,6 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
       res.sendFile(__dirname + "/signup.html");
+      console.log(apiKey, listId);
 });
 
 app.post("/", (req, res) => {
@@ -56,7 +59,7 @@ app.post("/", (req, res) => {
                   res.sendFile(__dirname + "/failure.html"); 
             }
 
-            console.log(apiKey, listId);
+            
 
             response.on("data", (data) =>{
                   console.log(JSON.parse(data));
