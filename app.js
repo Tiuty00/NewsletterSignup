@@ -46,15 +46,16 @@ app.post("/", (req, res) => {
 
       const request = https.request(url, options, (response) => {
 
-            console.log(apiKey, listId);
+            
             
             if (response.statusCode === 200) {
                   res.sendFile(__dirname + "/success.html");
             } else {
-                  const test = document.querySelector(".test");
-                  test.textContent = `Key: ${apiKey} | listID: :${listId}`
+
                   res.sendFile(__dirname + "/failure.html"); 
             }
+
+            console.log(apiKey, listId);
 
             response.on("data", (data) =>{
                   console.log(JSON.parse(data));
